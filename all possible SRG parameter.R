@@ -1,5 +1,8 @@
+#R programming
+#for \mu=-3,-4,-5
+#check if there are any graphs in $\mathcal B$ other than $K_{1,2}$ and $\Gamma_{36}$
 #cliques, co-cliques, disconnected SRG G_i not considered
-#all possible G_i
+#all possible G_i parameters generated for each $\mu=-3,-4,-5$
 
 #t (3:90)
 mu=-3
@@ -81,9 +84,11 @@ rundata=function(){
 }
 
 #for each t value, find possible parameters that gives n_1+n_2=n
-#print if there exist a case for the t value st \rho+\mu=k_{11}+k_{22} holds 
+#print if there exist a case for the t value st \rho+\mu=k_{11}+k_{22} holds, 
 #then check if k_{21} is an integer
 for(t in 3:1395){
   n=0.5*t*(t+1)
   rundata() #call function
 }
+#results: for cases of t values st \rho+\mu=k_{11}+k_{22} holds, k_{21} is not an integer
+# for $\mu=-3,-4,-5$, unable to find a graph in $\mathcal B$
